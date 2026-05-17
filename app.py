@@ -82,7 +82,7 @@ def load_model():
     model_path = "potato_model.h5"
     if not os.path.exists(model_path):
         return None
-    return tf.keras.models.load_model(model_path)
+    return tf.keras.models.load_model(model_path, compile=False)
 
 # ─── Preprocessing ──────────────────────────────────────────────────────────────
 def preprocess_image(img: Image.Image) -> np.ndarray:
