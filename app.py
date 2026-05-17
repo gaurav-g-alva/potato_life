@@ -79,7 +79,7 @@ SEVERITY_BADGE = {
 # ─── Model Loading ──────────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner=False)
 def load_model():
-    model_path = "potato_model.h5"
+    model_path = "potato_model.keras"
     if not os.path.exists(model_path):
         return None
     return tf.keras.models.load_model(model_path, compile=False)
